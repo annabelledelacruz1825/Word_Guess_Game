@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+             <script type="text/javascript"></script>
+             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                     <h1 class="lead"> Word Game </h1>
+
+                                                                                                                                                 
+</head>
+
+
+
+ <body>
+Psychic Game
+<script>
+
+var lettertoguess = "m"
+$(document).on("keydown", function (event)
+{
+    if ( lettertoguess === event.key )
+    {
+        alert ("You win")
+        wins+= 1
+        $("#wins").html(wins)
+    }
+    else
+    {
+        alert ("You lose")
+        losses+= 1
+        $("#losses").html(losses)
+    }
+
+})
+
+var wins = 0;
+var losses= 0;
+
+</script>
+<p>wins  <span id= "wins"> 1 </span> </p>
+<p> losses  <span id= "losses">1</span>  </p>
+<p>guesses Left   <span id= "guessesLeft">9 </span></p>
+<p>Your guesses so far <span id= "guesses"> </span></p>
+</body>
+</html>
